@@ -1,0 +1,14 @@
+name: fstma-tut01
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - jupyterlab
+  - pytorch
+  - git
+  - pip
+  - pip:
+    - pettingzoo[mpe]
+    - git+https://github.com/sarah-keren/multi-taxi
