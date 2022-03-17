@@ -123,11 +123,11 @@ It is considred best practice for python project to have minimal environments to
 ## Installing python
 In anaconda, python is simply another package to be installed by the package manager. For example, we can turn our `empty1` environment into a python environment simply by installing python with `conda install python`. This will install the latest available python version for anaconda. We can specify a version in any granularity, e.g., `conda install ptyhon=2`, `conda install python=3.8`, `conda install 3.7.12`. However, the easiest way to create python enviroments is by installing them directly at the environment's creation like so:
 ```
-conda cereate my_py38_env python=3.8
+conda create -n my_py38_env python=3.8
 ```
 
-## installing libraries with conda
-We can install third-party python libraries and packages as we would any other package using
+## Installing libraries with conda
+Once our python environment has been activated, e.g., `conda activate my_py38_env`, we can install third-party python libraries and packages as we would any other package using
 ```
 conda install <package_name>
 ```
@@ -137,8 +137,8 @@ conda install -c conda-forge numpy
 ```
 and we can now import the numpy library into our python scripts. Note that if we try to install numpy in an empty environment, anaconda will install the latest available python version and then numpy within it. Other versions of python on your computer will be unaffected.
 
-## Pip packages
-Anaconda works seemlessly with pip, the Package Installer for Python. Once a python version has been installed, we can run the pip command from the environment. For example, when the `my_py38_env` environment we created in a previous section is active, we can run `pip --version` and see that pip is indeed installed (if not, then `conda install pip`). We can run 
+## installing libraries with pip
+AnaIonda works seemlessly with pip, the Package Installer for Python. Once a python version has been installed, we can run the pip command from the environment. For example, when the `my_py38_env` environment we created in a previous section is active, we can run `pip --version` and see that pip is indeed installed (if not, then `conda install pip`). We can run 
 ```
 pip install numpy
 ```
