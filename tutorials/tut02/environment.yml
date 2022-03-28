@@ -1,0 +1,19 @@
+name: fstma-tut02
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyterlab
+  - python=3.8
+  - scikit-learn
+  - pytorch
+  - matplotlib
+  - tensorboard
+  - torchvision
+  - tqdm
+  - ipywidgets
+  - git
+  - pip
+  - pip:
+    - git+https://github.com/sarah-keren/AI_agents
