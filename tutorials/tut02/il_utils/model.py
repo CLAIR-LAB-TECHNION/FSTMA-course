@@ -8,7 +8,7 @@ class MLP(nn.Module):
     https://www.sciencedirect.com/topics/computer-science/multilayer-perceptron
     """
 
-    def __init__(self, in_features, hidden_dims, out_features):
+    def __init__(self, in_features, hidden_dims, out_features, output_activation=None):
         """
         initializes the MLP modules
         :param in_features: the number of input features
@@ -30,6 +30,10 @@ class MLP(nn.Module):
 
         # remove last non-linearity
         layers = layers[:-1]
+
+        # add output activation if needed
+        if output_activation is not None:
+            layers.append(output_activation)
 
         # create sequential model
         self.fc_layers = nn.Sequential(*layers)

@@ -2,12 +2,12 @@ from torch.utils.data import Dataset
 
 
 class ImitationLearningDataset(Dataset):
-    def __init__(self, trajectories, prep_fn=None):
+    def __init__(self, trajectories, prep_obs=None, prep_action=None):
         """
         Creates a dataset
         :param obs_action_paris: an array like object of shape (N, 2) where the first column is the observations and the
                                  second is the corresponding action
-        :param prep_fn: a f:obs --> torch.Tensor that preprocesses a single observation.
+        :param prep_obs: a f:obs --> torch.Tensor that preprocesses a single observation.
         """
         super().__init__()
         # merge trajectories into a single dataset of observation-action paris
@@ -16,10 +16,14 @@ class ImitationLearningDataset(Dataset):
             self.obs_action_paris.extend(list(zip(trajectory.observations, trajectory.actions)))
 
         # if no preprocessing function is given, use the identity function
-        if prep_fn is None:
-            self.prep_fn = lambda x: x
+        if prep_obs is None:
+            self.prep_obs = lambda x: x
         else:
-            self.prep_fn = prep_fn
+            self.prep_obs = prep_obs
+        if prep_action is None:
+            self.prep_action = lambda x: x
+        else:
+            self.prep_action = prep_action
 
     def __getitem__(self, index: int):
         """
@@ -30,7 +34,7 @@ class ImitationLearningDataset(Dataset):
         """
         state, action = self.obs_action_paris[index]
 
-        return self.prep_fn(state), action
+        return self.prep_obs(state), self.prep_action(action)
 
     def __len__(self):
         """

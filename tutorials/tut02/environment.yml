@@ -17,3 +17,4 @@ dependencies:
   - pip
   - pip:
     - git+https://github.com/sarah-keren/AI_agents
+    - pettingzoo[mpe]
