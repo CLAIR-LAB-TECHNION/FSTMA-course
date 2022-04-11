@@ -1,3 +1,5 @@
+<img src="https://miro.medium.com/max/1400/1*unxCpz5z_g-vOY1SrmI_KQ.jpeg" align="center"/>
+
 # Introduction
 Welcome our course "From Single-Agent to Multi-Agent", abbreviated FSTMA, where you will learn the theoretical aspects of various single-agent and multi-agent AI frameworks, as well as practical work with different systems using Python based implementations. This tutorial contains guides to all the tools required to successfully run and implement a tutorial on your local machine. The main tools we will be using are Anaconda, Jupyter Lab, and OpenAI Gym based environments, each of which has a separate demo written as jupyter notebooks.
 
