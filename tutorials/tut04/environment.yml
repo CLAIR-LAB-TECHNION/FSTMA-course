@@ -14,5 +14,5 @@ dependencies:
   - pip:
     - pettingzoo[mpe]
     - git+https://github.com/sarah-keren/multi-taxi
+    -   git+https://github.com/sarah-keren/AI_agents
     - pygame
-    - git+https://github.com/sarah-keren/AI_agents
