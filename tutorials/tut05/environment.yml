@@ -1,0 +1,19 @@
+name: fstma-tut05
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - jupyterlab
+  - gym
+  - numpy
+  - pytorch
+  - git
+  - pip
+  - pip:
+    - pettingzoo[mpe]
+    - git+https://github.com/sarah-keren/multi-taxi
+    - stable-baselines3
+    - git+https://github.com/sarah-keren/AI_agents
+
