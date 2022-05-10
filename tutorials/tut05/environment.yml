@@ -9,6 +9,8 @@ dependencies:
   - gym
   - numpy
   - pytorch
+  - tqdm
+  - ipywidgets
   - git
   - pip
   - pip:
