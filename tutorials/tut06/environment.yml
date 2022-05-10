@@ -1,0 +1,17 @@
+name: fstma-tut06
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - git
+  - python=3.8
+  - numpy
+  - jupyterlab
+  - pytorch
+  - matplotlib
+  - gym
+  - pip
+  - pip:
+      - git+https://github.com/sarah-keren/multi-taxi
+      - pettingzoo[mpe]
