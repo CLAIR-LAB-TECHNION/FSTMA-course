@@ -1,0 +1,14 @@
+name: fstma-tut07
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - jupyterlab
+  - ca-certificates
+  - openssl
+  - git
+  - pip
+  - pip:
+    - git+https://github.com/sarah-keren/multi_taxi
+    - git+https://github.com/sarah-keren/MAC
