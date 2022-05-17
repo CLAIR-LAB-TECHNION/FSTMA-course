@@ -12,3 +12,4 @@ dependencies:
   - pip:
     - git+https://github.com/sarah-keren/multi_taxi
     - git+https://github.com/sarah-keren/MAC
+    - RISE
