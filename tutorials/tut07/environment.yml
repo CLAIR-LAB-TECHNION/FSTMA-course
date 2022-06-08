@@ -7,9 +7,10 @@ dependencies:
   - jupyterlab
   - ca-certificates
   - openssl
+  - tqdm
+  - ipywidgets
   - git
   - pip
   - pip:
     - git+https://github.com/sarah-keren/multi_taxi
     - git+https://github.com/sarah-keren/MAC
-    - RISE
