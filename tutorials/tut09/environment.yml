@@ -1,0 +1,22 @@
+name: fstma-tut09
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - git
+  - python=3.8
+  - numpy
+  - jupyterlab
+  - pytorch
+  - matplotlib
+  - tqdm
+  - ipywidgets
+  - gym
+  - pip
+  - mkl < 2022 # needed for intel's math kernel library to be mac M1 compatible (https://stackoverflow.com/a/71640311/15826250)
+  - pip:
+      - git+https://github.com/sarah-keren/multi_taxi@0.0.0
+      - git+https://github.com/sarah-keren/MAC
+      - pettingzoo[mpe]
+
